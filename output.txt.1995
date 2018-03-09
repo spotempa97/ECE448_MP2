@@ -1,0 +1,181 @@
+==1995== Memcheck, a memory error detector.
+==1995== Copyright (C) 2002-2006, and GNU GPL'd, by Julian Seward et al.
+==1995== Using LibVEX rev 1658, a library for dynamic binary translation.
+==1995== Copyright (C) 2004-2006, and GNU GPL'd, by OpenWorks LLP.
+==1995== Using valgrind-3.2.1, a dynamic binary instrumentation framework.
+==1995== Copyright (C) 2000-2006, and GNU GPL'd, by Julian Seward et al.
+==1995== For more details, rerun with: -v
+==1995== 
+==1995== My PID = 1995, parent PID = 1927.  Prog and args are:
+==1995==    ./adventure
+==1995== 
+==1995== Syscall param rt_sigaction(act->sa_mask) points to uninitialised byte(s)
+==1995==    at 0x740367: __libc_sigaction (in /lib/libpthread-2.5.so)
+==1995==    by 0x740452: sigaction (in /lib/libpthread-2.5.so)
+==1995==    by 0x8049B00: clean_on_signals (assert.c:101)
+==1995==    by 0x8049699: main (adventure.c:739)
+==1995==  Address 0xBED078E4 is on thread 1's stack
+==1995== 
+==1995== Syscall param rt_sigaction(act->sa_flags) points to uninitialised byte(s)
+==1995==    at 0x740367: __libc_sigaction (in /lib/libpthread-2.5.so)
+==1995==    by 0x740452: sigaction (in /lib/libpthread-2.5.so)
+==1995==    by 0x8049B00: clean_on_signals (assert.c:101)
+==1995==    by 0x8049699: main (adventure.c:739)
+==1995==  Address 0xBED078DC is on thread 1's stack
+==1995== 
+==1995== Syscall param rt_sigaction(act->sa_restorer) points to uninitialised byte(s)
+==1995==    at 0x740367: __libc_sigaction (in /lib/libpthread-2.5.so)
+==1995==    by 0x740452: sigaction (in /lib/libpthread-2.5.so)
+==1995==    by 0x8049B00: clean_on_signals (assert.c:101)
+==1995==    by 0x8049699: main (adventure.c:739)
+==1995==  Address 0xBED078E0 is on thread 1's stack
+==1995== 
+==1995== Use of uninitialised value of size 4
+==1995==    at 0x804B69A: determine_palette (photo.c:527)
+==1995==    by 0x804B4C0: read_photo (photo.c:455)
+==1995==    by 0x804C4A9: build_world (world.c:792)
+==1995==    by 0x804969E: main (adventure.c:741)
+==1995== 
+==1995== Use of uninitialised value of size 4
+==1995==    at 0x804B6B2: determine_palette (photo.c:527)
+==1995==    by 0x804B4C0: read_photo (photo.c:455)
+==1995==    by 0x804C4A9: build_world (world.c:792)
+==1995==    by 0x804969E: main (adventure.c:741)
+==1995== 
+==1995== Use of uninitialised value of size 4
+==1995==    at 0x804B6D0: determine_palette (photo.c:528)
+==1995==    by 0x804B4C0: read_photo (photo.c:455)
+==1995==    by 0x804C4A9: build_world (world.c:792)
+==1995==    by 0x804969E: main (adventure.c:741)
+==1995== 
+==1995== Use of uninitialised value of size 4
+==1995==    at 0x804B6F0: determine_palette (photo.c:529)
+==1995==    by 0x804B4C0: read_photo (photo.c:455)
+==1995==    by 0x804C4A9: build_world (world.c:792)
+==1995==    by 0x804969E: main (adventure.c:741)
+==1995== 
+==1995== Use of uninitialised value of size 4
+==1995==    at 0x804B70E: determine_palette (photo.c:530)
+==1995==    by 0x804B4C0: read_photo (photo.c:455)
+==1995==    by 0x804C4A9: build_world (world.c:792)
+==1995==    by 0x804969E: main (adventure.c:741)
+==1995== 
+==1995== Use of uninitialised value of size 4
+==1995==    at 0x804B72D: determine_palette (photo.c:531)
+==1995==    by 0x804B4C0: read_photo (photo.c:455)
+==1995==    by 0x804C4A9: build_world (world.c:792)
+==1995==    by 0x804969E: main (adventure.c:741)
+==1995== 
+==1995== Conditional jump or move depends on uninitialised value(s)
+==1995==    at 0x5ECD3A: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995== 
+==1995== Conditional jump or move depends on uninitialised value(s)
+==1995==    at 0x5ECD3A: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCE2: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995== 
+==1995== Conditional jump or move depends on uninitialised value(s)
+==1995==    at 0x5ECD3A: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCE2: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995== 
+==1995== Conditional jump or move depends on uninitialised value(s)
+==1995==    at 0x5ECD3A: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCE2: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCE2: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995== 
+==1995== Conditional jump or move depends on uninitialised value(s)
+==1995==    at 0x5ECD3A: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCE2: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995== 
+==1995== Conditional jump or move depends on uninitialised value(s)
+==1995==    at 0x5ECD3A: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCE2: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCE2: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995== 
+==1995== Invalid read of size 4
+==1995==    at 0x804B88D: countCmp (photo.c:563)
+==1995==    by 0x5ECD37: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCE2: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCE2: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==    by 0x5ECCC7: msort_with_tmp (in /lib/libc-2.5.so)
+==1995==  Address 0xBED0899C is not stack'd, malloc'd or (recently) free'd
+==1995== 
+==1995== ERROR SUMMARY: 384022 errors from 16 contexts (suppressed: 14 from 1)
+==1995== malloc/free: in use at exit: 16,842,152 bytes in 4 blocks.
+==1995== malloc/free: 5 allocs, 1 frees, 16,842,504 bytes allocated.
+==1995== For counts of detected errors, rerun with: -v
+==1995== searching for pointers to 4 not-freed blocks.
+==1995== checked 189,636 bytes.
+==1995== 
+==1995== LEAK SUMMARY:
+==1995==    definitely lost: 0 bytes in 0 blocks.
+==1995==      possibly lost: 0 bytes in 0 blocks.
+==1995==    still reachable: 16,842,152 bytes in 4 blocks.
+==1995==         suppressed: 0 bytes in 0 blocks.
+==1995== Reachable blocks (those to which a pointer was found) are not shown.
+==1995== To see them, rerun with: --show-reachable=yes
